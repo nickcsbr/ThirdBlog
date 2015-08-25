@@ -33,7 +33,8 @@
   <div class="form-group">
     <%= f.label "Message", class: 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_area :description, class: 'form-control', rows: 8 %>
+      <%= f.text_area :description, class: "tinymce" %>
+      <%= tinymce %>
     </div>
     <%=f.error_span(:description) %>
   </div>

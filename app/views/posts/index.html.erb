@@ -1,12 +1,11 @@
 <%- model_class = Post -%>
 <div class="page-header" xmlns="http://www.w3.org/1999/html">
   <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
-</div>
+  <% if user_signed_in? %>
 
-<div class="new_button">
-    <% if user_signed_in? %>
-        <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary' %>
-    <% end %>
+        <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary btn-xs glyphicon glyphicon-plus' %>
+
+  <% end %>
 </div>
 
 <div class="posts_body">
@@ -25,7 +24,8 @@
                         <%= @user.username %>
                     <% end %>
                 </strong>
-                <p></p><%= post.description %></p>
+
+                <p><%= post.description.html_safe %></p>
             </div>
             <% if user_signed_in? or post.created_at != post.updated_at %>
                 <div class="panel-footer">

@@ -1,0 +1,46 @@
+<%- model_class = Post -%>
+<div class="page-header" xmlns="http://www.w3.org/1999/html">
+  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<div class="new_button">
+    <% if user_signed_in? %>
+        <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary' %>
+    <% end %>
+</div>
+
+<div class="posts_body">
+    <% @posts.each do |post| %>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong><%= post.title %></strong>
+            </div>
+            <div class="panel-body">
+                <%= post.created_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %> by
+                <% @user = User.find_by_id(post.authorid) %>
+                <strong>
+                    <%if @user.nil? %>
+                        Unknown
+                    <% else %>
+                        <%= @user.username %>
+                    <% end %>
+                </strong>
+                <p></p><%= post.description %></p>
+            </div>
+            <% if user_signed_in? or post.created_at != post.updated_at %>
+                <div class="panel-footer">
+                    <% unless post.created_at == post.updated_at %>
+                        Edited at <%= post.updated_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %>
+                    <% end %>
+                    <% if user_signed_in? %>
+                        <%= link_to t('.edit', default: t("helpers.links.edit")), edit_post_path(post),
+                            class: 'btn btn-default btn-xs' %>
+                        <%= link_to t('.destroy', default: t("helpers.links.destroy")), post_path(post),
+                            method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm",
+                            default: 'Are you sure?')) }, class: 'btn btn-xs btn-danger' %>
+                    <% end %>
+                </div>
+              <% end %>
+        </div>
+    <% end %>
+</div>

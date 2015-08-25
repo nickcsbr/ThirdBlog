@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ThirdBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header"></div>
+<%= nav_bar fixed: :top, responsive: true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+    <% end %>
+
+    <% if user_signed_in? %>
+        <%= menu_group do %>
+            <% @logged_user = "Logged in as " + current_user.username %>
+            <%= menu_item @logged_user %>
+            <%= menu_item "Edit profile", edit_user_registration_path, class: 'navbar-link' %>
+            <%= menu_item "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link' %>
+        <% end %>
+    <% else %>
+        <%= menu_group do %>
+            <%= menu_item "Sign up", new_user_registration_path, class: 'navbar-link' %>
+            <%= menu_item "Login", new_user_session_path, class: 'navbar-link' %>
+        <% end %>
+    <% end %>
+<% end %>
+</div>
+
+<div class="Alerts">
+    <% if notice || alert %>
+        <div class="flash-message <%= notice ? "notice" : ""%><%= alert ? "error" : ""%>">
+            <div class="container container_12 clearfix">
+                <div class="grid_12">
+                    <% if notice %>
+                        <p><%= notice %></p>
+                    <% elsif alert %>
+                        <p><%= alert %></p>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<div class="container main_container">
+    <%= yield %>
+</div>
+
+<% if false %>
+<% if notice || alert %>
+    <div class="alert alert-info fade">
+        <span class="close" data-dismiss="alert">&times;</span>
+        <strong>Error!</strong> A problem has been occurred while submitting your data.
+    </div>
+<% end %>
+<% end %>
+
+</body>
+</html>

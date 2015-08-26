@@ -2,10 +2,12 @@ theme_advanced_toolbar_location: top
 theme_advanced_toolbar_align: left
 theme_advanced_statusbar_location: bottom
 theme_advanced_buttons3_add:
-  - tablecontrols
-  - fullscreen
+toolbar1: styleselect | bold italic | image media | undo redo | emoticons
+toolbar2:
 plugins:
   - table
   - fullscreen
   - image
   - imagetools
+  - media
+  - emoticons

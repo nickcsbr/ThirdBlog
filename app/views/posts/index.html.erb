@@ -1,11 +1,12 @@
 <%- model_class = Post -%>
 <div class="page-header" xmlns="http://www.w3.org/1999/html">
-  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %>
   <% if user_signed_in? %>
 
         <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary btn-xs glyphicon glyphicon-plus' %>
 
   <% end %>
+  </h1>
 </div>
 
 <div class="posts_body">

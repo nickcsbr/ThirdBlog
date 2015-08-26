@@ -25,15 +25,16 @@
                         <%= @user.username %>
                     <% end %>
                 </strong>
-
                 <p><%= post.description.html_safe %></p>
             </div>
+
             <% if user_signed_in? or post.created_at != post.updated_at %>
                 <div class="panel-footer">
-                    <% unless post.created_at == post.updated_at %>
+                  <% unless post.created_at == post.updated_at %>
                         Edited at <%= post.updated_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %>
                     <% end %>
                     <% if user_signed_in? %>
+                        <%= link_to "Add comment", post_path(post), class: 'btn btn-default btn-xs' %>
                         <%= link_to t('.edit', default: t("helpers.links.edit")), edit_post_path(post),
                             class: 'btn btn-default btn-xs' %>
                         <%= link_to t('.destroy', default: t("helpers.links.destroy")), post_path(post),

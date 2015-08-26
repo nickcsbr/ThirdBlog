@@ -45326,3 +45326,1156 @@ ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstra
   Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 13]]
+  Rendered posts/_form.html.erb (5.4ms)
+  Rendered posts/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/table/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/image/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/media/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/imagetools/plugin.js" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for 127.0.0.1 at 2015-08-26 13:24:02 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-embarassed.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-frown.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-laughing.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-innocent.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-kiss.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-sealed.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-smile.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-surprised.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:24:05 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:24:06 -0300
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvyZw/gx8nUJ60VD32j/hZqxZ25SfKfDEcpDxnMD9kPZHOHOd7Xh61a5pYyv5JbgogV7kRBOOmBxD3CYdZaxyQ==", "post"=>{"title"=>"", "description"=>"<h3><img src=\"assets/tinymce/plugins/emoticons/img/smiley-undecided.gif\" alt=\"undecided\" /> <strong>mais um...</strong></h3>"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "authorid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", ""], ["description", "<h3><img src=\"assets/tinymce/plugins/emoticons/img/smiley-undecided.gif\" alt=\"undecided\" /> <strong>mais um...</strong></h3>"], ["authorid", "13"], ["created_at", "2015-08-26 16:24:26.411357"], ["updated_at", "2015-08-26 16:24:26.411357"]]
+  [1m[36m (55.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 56.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-08-26 13:24:26 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g5zL4v47i5pnuXWUGiSwPGI4Lj2Jfciq1NR0aLvB060YfLPvcb+YBDjrlVtqqNlZWowywstPVQm0EUc2vVSUJw=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:33:39 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:41:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/nicola/projetos/thirdBlog/app/controllers/application_controller.rb:33: syntax error, unexpected tSTRING_DEND, expecting keyword_end):
+  app/controllers/application_controller.rb:33: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:41:43 -0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 260ms (Views: 250.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/posts.self-105bf23adb80fbe8830ff119328eaef85fb0cbb37d8ed47bf46db3b1b3ee7e96.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/scaffolds.self-bbba893bbc5ceb7e7732233920826749f48f885db5770e300727c94e27f5f957.css?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/preinit.self-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/tinymce.self-32f7ec64113ff0762ae8f7ed4c4962a76bbbde969da747478bdeb308f5e3c4e1.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/bootstrap.self-d151d591501c9417ade64ee889a1baa9fd5f8dc3e3837758ac32fd75cfb09feb.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:41:44 -0300
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:41:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 161ms (Views: 158.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 284ms (Views: 257.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+
+
+Started GET "/assets/scaffolds.self-bbba893bbc5ceb7e7732233920826749f48f885db5770e300727c94e27f5f957.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:44 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/posts.self-105bf23adb80fbe8830ff119328eaef85fb0cbb37d8ed47bf46db3b1b3ee7e96.css?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/tinymce/preinit.self-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/tinymce/tinymce.self-32f7ec64113ff0762ae8f7ed4c4962a76bbbde969da747478bdeb308f5e3c4e1.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/tinymce.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/bootstrap.self-d151d591501c9417ade64ee889a1baa9fd5f8dc3e3837758ac32fd75cfb09feb.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2015-08-26 13:48:45 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:48:51 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soE9TKNZvIgf56uY8+8DD0mL8WbRlXJkXNY27GhCFfSYGZFMWvBiammLxlPfDqydfibBRsxxSHudte2qqesQ6A==", "user"=>{"login"=>"admin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE (lower(username) = 'admin' OR lower(email) = 'admin')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-08-26 14:52:03.184111"], ["current_sign_in_at", "2015-08-26 16:48:52.039254"], ["sign_in_count", 17], ["updated_at", "2015-08-26 16:48:52.040567"], ["id", 13]]
+  [1m[36m (28.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 125ms (ActiveRecord: 29.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 181ms (Views: 174.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-08-26 13:48:52 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qtiw8r3u2a5N4LG79NQKAq6CaKwveklUIqX+o6KpqwZoMH+S/81PDcJVosji6kUJ73bcBjV9gZL+/mukGZfDZw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:49:10 -0300
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:49:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 121ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:49:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xOzYhGnb59UKdZCUll8fR64yQPMlkCybo0ILvHeczIOklDV6pm+Jb7QjNt6GasG5NlrBc4cUUv79+uLdQsUZ6A==", "user"=>{"login"=>"outro", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE (lower(username) = 'outro' OR lower(email) = 'outro')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-08-26 14:16:53.788652"], ["current_sign_in_at", "2015-08-26 16:49:16.721542"], ["sign_in_count", 3], ["updated_at", "2015-08-26 16:49:16.722638"], ["id", 15]]
+  [1m[36m (25.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 111ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:49:16 -0300
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-08-26 13:49:17 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-08-26 13:49:19 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eKaZHYObOY3te8kmwbdsoI6dl3p4GAvOM3aoCt609x4u5gmC0kAa+1BL9+oKd7FPBeYJgl96X+zDpmuFFPhI7w=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:49:19 -0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 111ms (Views: 109.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:49:20 -0300
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:49:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 134ms (Views: 132.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6QW5aQPNPhYWtgjDATZW5LqMyPQxxUFUNEuXo6MMSs+F2qdS6nYOUyL9BjusUtkNXg8NamfwGpH+KBi1mqlA4Q==", "user"=>{"login"=>"outro@outro.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE (lower(username) = 'outro@outro.com' OR lower(email) = 'outro@outro.com')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-08-26 16:49:16.721542"], ["current_sign_in_at", "2015-08-26 16:49:37.362873"], ["sign_in_count", 4], ["updated_at", "2015-08-26 16:49:37.363998"], ["id", 15]]
+  [1m[36m (30.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-08-26 13:49:37 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (50.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-08-26 13:50:15 -0300
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 15]]
+  Rendered posts/_form.html.erb (8.7ms)
+  Rendered posts/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/table/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/media/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/image/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/imagetools/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/plugin.js" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for 127.0.0.1 at 2015-08-26 13:50:16 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-embarassed.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-frown.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-laughing.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-kiss.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-innocent.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-sealed.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-smile.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-surprised.gif" for 127.0.0.1 at 2015-08-26 13:50:31 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-innocent.gif" for 127.0.0.1 at 2015-08-26 13:50:33 -0300
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-08-26 13:50:33 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hzUiLOTGJ6wNE8bnbQtu5dSbhLMsSjtNiXfa8LyB+AEt3m4TuHgFe2oKwhQcUU+grANad99ddRwAcCJKkzXqAQ==", "post"=>{"title"=>"werwerew", "description"=>"<p>adsdff<strong>adasdasdsaa<em>sdasdasdsa</em></strong><em>asdadasd<strong></strong></em>asdasdasd<img src=\"assets/tinymce/plugins/emoticons/img/smiley-innocent.gif\" alt=\"innocent\" /></p>"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "authorid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "werwerew"], ["description", "<p>adsdff<strong>adasdasdsaa<em>sdasdasdsa</em></strong><em>asdadasd<strong></strong></em>asdasdasd<img src=\"assets/tinymce/plugins/emoticons/img/smiley-innocent.gif\" alt=\"innocent\" /></p>"], ["authorid", "15"], ["created_at", "2015-08-26 16:50:33.977459"], ["updated_at", "2015-08-26 16:50:33.977459"]]
+  [1m[35m (18.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "13"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-undecided.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-yell.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cry.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-innocent.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-cool.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-wink.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.8ms)
+
+
+Started GET "/assets/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2015-08-26 13:50:34 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/nicola/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.6ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/nicola/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.2ms)

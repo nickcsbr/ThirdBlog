@@ -9,4 +9,43 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @post.description.html_safe %></dd>
 </dl>
+<hr>
 
+<h3>Comments</h3>
+
+<div class="comment">
+  <% @post.comments.each do |comment| %>
+      <i><strong><%=h comment.name %></strong> said:</i><br />
+      <%= simple_format h(comment.body) %>
+      <br>
+      <% if @post.comments.length > 1 %>
+          <hr>
+      <% end %>
+  <% end %>
+</div>
+
+New comment: <br>
+
+<%= form_for @comment do|f| %>
+    <%#= f.error_messages %>
+    <%= f.hidden_field :post_id %>
+
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :body %><br />
+      <%= f.text_area :body %>
+    </p>
+
+    <p>
+      <%= f.submit "Post Comment" %>
+    </p>
+<% end %>

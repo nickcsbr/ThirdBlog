@@ -8,7 +8,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-
+    @post = Post.find(params[:id])
+    @comment = Comment.new( post: @post )
   end
 
   # GET /posts/new
@@ -31,7 +32,6 @@ class PostsController < ApplicationController
     else
       render :new
     end
-
   end
 
   # PATCH/PUT /posts/1
@@ -47,6 +47,11 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_url, notice: 'Post was successfully deleted.'
+  end
+
+  def comment(post)
+    @post = post
+    render
   end
 
   private

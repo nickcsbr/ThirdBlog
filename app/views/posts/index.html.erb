@@ -26,6 +26,24 @@
                     <% end %>
                 </strong>
                 <p><%= post.description.html_safe %></p>
+              
+              <hr>
+              <h3>Comments <%= link_to "Add comment", post_path(post), class: 'btn btn-default btn-xs' %></h3>
+
+              <div class="comment">
+                <% post.comments.each do |comment| %>
+                    <i><strong><%=h comment.name %></strong> said:</i><br />
+                    <%= simple_format h(comment.body) %>
+                    <%= link_to 'Delete Comment', comment, class: 'btn btn-xs btn-danger',
+
+                                method: :delete if user_signed_in? %>
+                    <br>
+                    <% if post.comments.length > 1 %>
+                        <hr>
+                    <% end %>
+                <% end %>
+              </div>
+
             </div>
 
             <% if user_signed_in? or post.created_at != post.updated_at %>
@@ -34,7 +52,6 @@
                         Edited at <%= post.updated_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %>
                     <% end %>
                     <% if user_signed_in? %>
-                        <%= link_to "Add comment", post_path(post), class: 'btn btn-default btn-xs' %>
                         <%= link_to t('.edit', default: t("helpers.links.edit")), edit_post_path(post),
                             class: 'btn btn-default btn-xs' %>
                         <%= link_to t('.destroy', default: t("helpers.links.destroy")), post_path(post),

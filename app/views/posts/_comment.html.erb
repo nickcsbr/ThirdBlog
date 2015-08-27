@@ -1,0 +1,13 @@
+<div class="comment">
+  <% @post.comments.each do |comment| %>
+      <i><strong><%=h comment.name %></strong> said:</i><br />
+      <%= simple_format h(comment.body) %>
+      <%= link_to 'Delete Comment', comment, class: 'btn btn-xs btn-danger',
+
+                  method: :delete if user_signed_in? %>
+      <br>
+      <% if @post.comments.length > 1 %>
+          <hr>
+      <% end %>
+  <% end %>
+</div>

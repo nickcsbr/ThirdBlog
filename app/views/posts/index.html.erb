@@ -3,7 +3,7 @@
   <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %>
   <% if user_signed_in? %>
 
-        <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary btn-xs glyphicon glyphicon-plus' %>
+        <%= link_to t('.new', default: t("helpers.links.new")), new_post_path, class: 'btn btn-primary btn-xs' %>
 
   <% end %>
   </h1>
@@ -26,24 +26,20 @@
                     <% end %>
                 </strong>
                 <p><%= post.description.html_safe %></p>
-              
+
               <hr>
               <h3>Comments <%= link_to "Add comment", post_path(post), class: 'btn btn-default btn-xs' %></h3>
 
               <div class="comment">
                 <% post.comments.each do |comment| %>
-                    <i><strong><%=h comment.name %></strong> said:</i><br />
+                    <%= comment.created_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %> <i><strong><%=h comment.name %></strong> said:</i><br>
                     <%= simple_format h(comment.body) %>
-                    <%= link_to 'Delete Comment', comment, class: 'btn btn-xs btn-danger',
 
-                                method: :delete if user_signed_in? %>
+                    <%= link_to 'Delete Comment', comment, class: 'btn btn-xs btn-danger',
+                                method: :delete if user_signed_in?  and current_user.username == @user.username %>
                     <br>
-                    <% if post.comments.length > 1 %>
-                        <hr>
-                    <% end %>
                 <% end %>
               </div>
-
             </div>
 
             <% if user_signed_in? or post.created_at != post.updated_at %>
@@ -51,7 +47,7 @@
                   <% unless post.created_at == post.updated_at %>
                         Edited at <%= post.updated_at.localtime.strftime("%d-%m-%Y %H:%M:%S") %>
                     <% end %>
-                    <% if user_signed_in? %>
+                    <% if user_signed_in? and current_user.username == @user.username%>
                         <%= link_to t('.edit', default: t("helpers.links.edit")), edit_post_path(post),
                             class: 'btn btn-default btn-xs' %>
                         <%= link_to t('.destroy', default: t("helpers.links.destroy")), post_path(post),

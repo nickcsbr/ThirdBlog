@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :comments
-  resources :comments
-  resources :comments
   devise_for :users
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.

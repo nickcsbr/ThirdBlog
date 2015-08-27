@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-one_post = Post.last
-Comment.create(name: 'Fulano', email: 'abc@abc.com', body: 'Good thinking', post_id: one_post.id)
-Comment.create(name: 'Ciclano', email: 'ciclano@abc.com', body: 'Awesome thinking', post_id: one_post.id)
-Comment.create(name: 'Beltrano', email: 'beltrano@abc.com', body: 'Not so good thinking', post_id: one_post.id)
+#one_post = Post.last
+#Comment.create(name: 'Fulano', email: 'abc@abc.com', body: 'Good thinking', post_id: one_post.id)
+#Comment.create(name: 'Ciclano', email: 'ciclano@abc.com', body: 'Awesome thinking', post_id: one_post.id)
+#Comment.create(name: 'Beltrano', email: 'beltrano@abc.com', body: 'Not so good thinking', post_id: one_post.id)
+
+User.create(username: 'admin', email: 'admin@admin.com', password: '12345678')
